@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<s:Window xmlns:fx="http://ns.adobe.com/mxml/2009" 
+          xmlns:s="library://ns.adobe.com/flex/spark" 
+          xmlns:mx="library://ns.adobe.com/flex/mx"
+          styleName="win">
+    
+    <fx:Declarations>
+        <!-- Place non-visual elements (e.g., services, value objects) here -->
+        <s:RadioButtonGroup id="radioGroupMethodArrival" />
+    </fx:Declarations>
+    <fx:Style>
+        @namespace s "library://ns.adobe.com/flex/spark";
+        @namespace mx "library://ns.adobe.com/flex/mx";
+        .win
+        {
+            color: #ffffff;
+            background-color: #696969;
+            background-alpha: 1.0;
+        }
+        .ctrl
+        {
+            color: #000000;
+        }
+        .dump_text
+        {
+            color: #000000;
+            font-family: "MS Gothic";
+        }
+    </fx:Style>
+    
+    <s:VGroup horizontalCenter="0"
+              width="100%"
+              height="100%">
+        <s:Label id="labelVersion" />
+        <s:Label id="labelSrcStr" />
+        <s:HGroup width="100%">
+            <s:TextInput id="textInputSrcStr" width="80%" styleName="ctrl"/>
+            <s:Button id="btnSrcStrApply" label="Apply"  styleName="ctrl"/>
+        </s:HGroup>
+        <s:HGroup width="100%"
+                  height="30%">
+            <s:List id="listNetworkIf"
+                    width="50%"
+                    height="100%"
+                    styleName="ctrl">
+                <s:layout>
+                    <s:VerticalLayout useVirtualLayout="false" requestedMinRowCount="1"/>
+                </s:layout>
+            </s:List>
+            <s:TextArea id="textAreaNetworkIf"
+                        width="50%"
+                        height="100%"
+                        styleName="ctrl" />
+        </s:HGroup>
+        <s:HGroup width="100%">
+            <s:Label text="filename for dumping packets" width="25%" />
+            <s:TextInput id="textInputDumpFilename" width="60%" styleName="ctrl"/>
+            <s:Label id="labelDumpFTell" />
+        </s:HGroup>
+        <s:HGroup width="100%">
+            <s:Label text="filter" width="25%"/>
+            <s:TextInput id="textInputFilter" width="60%" styleName="ctrl" />
+        </s:HGroup>
+        <s:HGroup width="100%">
+            <s:RadioButton id="radioCapThread"
+                           groupName="radioGroupMethodArrival"
+                           label="use CaptureThread" />
+            <s:RadioButton id="radioPcapNext"
+                           groupName="radioGroupMethodArrival"
+                           label="use PcapNextEx" />
+        </s:HGroup>
+        <s:Button id="btnStart" label="Start" styleName="ctrl" />
+        <s:Label id="labelPcapHandleInfo" width="100%" />
+        <s:TextArea id="textAreaDump" width="100%" height="50%" styleName="dump_text" />
+    </s:VGroup>
+    
+</s:Window>

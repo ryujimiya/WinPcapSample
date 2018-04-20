@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<application xmlns="http://ns.adobe.com/air/application/4.0">
+  <id>WinPcapSample</id>
+  <versionNumber>1.0</versionNumber>
+  <filename>WinPcapSample</filename>
+  <name>WinPcapSample</name>
+  <initialWindow>
+    <title>WinPcapSample</title>
+    <content>WinPcapSample.swf</content>
+    <systemChrome>standard</systemChrome>
+    <transparent>false</transparent>
+    <visible>false</visible>
+    <minimizable>true</minimizable>
+    <maximizable>true</maximizable>
+    <resizable>true</resizable>
+  </initialWindow>
+  <supportedProfiles>extendedDesktop</supportedProfiles>
+  <!--
+         More options:
+         http://livedocs.adobe.com/flex/3/html/File_formats_1.html#1043413
+    -->
+  <extensions>
+    <extensionID>livefan.winpcap</extensionID>
+  </extensions>
+</application>
